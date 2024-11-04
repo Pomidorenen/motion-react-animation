@@ -1,0 +1,83 @@
+@import "global";
+*{
+  margin: 0;
+  padding: 0;
+  font-family:"Segoe UI Light",sans-serif;
+}
+body{
+  background-color: var(--main-color);
+}
+.portal{
+  position: absolute;
+  z-index: 5;
+}
+.App{
+  min-height: 100vh;
+}
+.App-header{
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  padding: 12px;
+  background-color: var(--main-color);
+  color: var(--thrid-color);
+}
+.App-footer{
+  margin-top: 48px;
+  width: 100%;
+  min-height: 240px;
+  background-color: var(--second-color);
+}
+.list{
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  justify-self: center;
+  gap: 12px;
+  width: 80%;
+  &>h1{
+    color: var(--thrid-color);
+    text-align: center;
+  }
+}
+.list-item{
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+.card{
+  display: flex;
+  padding: 12px;
+  width: 200px;
+  min-height:320px;
+  background-color: var(--second-color);
+  border-radius: $border-radius-base;
+  justify-content: space-between;
+  flex-direction: column;
+  &>.card-header{
+    font-weight: bold;
+    text-align: center;
+    font-size: 2rem;
+    color: var(--thrid-color);
+  }
+  &>.card-body{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap:12px;
+    max-height:240px;
+  }
+  &>.card-body>p{
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 4;
+    -webkit-box-orient: vertical;
+    color: var(--thrid-color);
+  }
+  &>.card-body>img{
+    border-radius: $border-radius-base/2;
+    user-select: none;
+  }
+}

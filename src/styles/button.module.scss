@@ -1,0 +1,24 @@
+@import "global";
+
+@mixin btn{
+  background-color: var(--second-color);
+  color: var(--thrid-color);
+
+  padding:$padding-base/2;
+  border-radius: $border-radius-base;
+
+  cursor: pointer;
+
+  border: none;
+
+  user-select: none;
+
+  transition: 0.4s background-color;
+  &:hover{
+      background-color: var(--four-color);
+  }
+}
+
+.btn{
+  @include btn;
+}
